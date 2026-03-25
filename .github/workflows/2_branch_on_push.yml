@@ -1,0 +1,13 @@
+name: GitHub Actions - Push to develop branch
+run-name: Running ${{github.event_name}}
+on: 
+    push:
+        branches: 
+            - develop
+jobs:
+    on-push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Comentário de teste
+              run: |
+                echo "Olá, este é um teste de push para a branch develop!"
