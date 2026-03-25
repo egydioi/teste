@@ -1,9 +1,11 @@
-name: GitHub Actions - Push to develop branch
+name: GitHub Actions - Push - Branch Template
 run-name: Running ${{github.event_name}}
 on: 
     push:
         branches: 
             - develop
+            - master
+            - 'release/**'
 jobs:
     on-push:
         runs-on: ubuntu-latest
