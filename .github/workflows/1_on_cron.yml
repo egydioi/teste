@@ -1,0 +1,11 @@
+name: GitHub Action - Cron Job Template
+run-name: Running ${{github.event_name}}
+on:
+  schedule:
+    - cron: '50 0-23 1-31 01-12 0-6' # Runs every day at midnight
+jobs:
+    on-workflow-run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Comentário
+              run: echo "This is a cron job running on GitHub Actions!"
