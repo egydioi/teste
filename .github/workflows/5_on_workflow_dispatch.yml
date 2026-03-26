@@ -1,0 +1,33 @@
+name: GitHub Actions - Workflow Dispatch
+run-name: Runnig ${{github.event_name}}
+on:
+    workflow_dispatch:
+        inputs:
+            tags:
+                description: 'Tags to be added to the release'
+                required: true
+                default: 'tag_1'
+                options:
+                    - tag_1
+                    - tag_2
+                    - tag_3
+                type: choice
+            browser:
+                description: 'Browser to run the tests on'
+                type: string
+            severidade:
+                description: 'Severity of the issue'
+                type: boolean
+jobs:
+    on-workflow-dispatch:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print the tags input
+              run: |
+                echo "The tags input is: ${{ github.event.inputs.tags }}"
+            - name: Print the browser input
+              run: |
+                echo "The browser input is: ${{ github.event.inputs.browser }}"
+            - name: Print the severidade input
+              run: |
+                echo "The severidade input is: ${{ github.event.inputs.severidade }}"
