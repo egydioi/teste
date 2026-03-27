@@ -11,6 +11,6 @@ jobs:
         steps:
             -   name: Comentário
                 run: |
-                    echo $variavel"
-                    echo "$variavel1"
-                    echo "$variavel2"
+                    echo "Variavel: $variavel"
+                    echo "Variavel1: $variavel1"
+                    echo "Variavel2: $variavel2"
