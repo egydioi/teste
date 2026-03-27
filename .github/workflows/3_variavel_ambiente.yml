@@ -11,6 +11,7 @@ jobs:
         steps:
             -   name: Comentário
                 run: |
+                    echo "Variavel: ${{env.variavel}}"
                     echo "Variavel: $variavel"
                     echo "Variavel1: $variavel1"
                     echo "Variavel2: $variavel2"
