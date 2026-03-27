@@ -1,0 +1,9 @@
+name: GitHub Actions -Trigger 1
+run-name: Running ${github.name}}
+on: [push, workflow_dispatch]
+jobs:
+    on-push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Comentário
+              run: echo "Trigger finalizado"
