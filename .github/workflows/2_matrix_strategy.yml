@@ -13,4 +13,6 @@ jobs:
               fail-fast: false
           steps:
               -   name: Comentário
-                  run: echo "Testando ${{ matrix.navegador }}"
+                  run: |
+                      echo "Testando ${{ matrix.navegador }}"
+                      echo "Tag: ${{ matrix.tag }}"
