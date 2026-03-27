@@ -1,0 +1,12 @@
+name: GitHub Actions - Workflow Run branches
+run-name: Running - Workflow Run branches
+on:
+  workflow_run:
+    workflows: [GitHub Actions - Trigger 1]
+    branches: [main]
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: echo "Workflow que foi trigado"
