@@ -9,6 +9,7 @@ jobs:
           strategy:
               matrix:
                   navegador: [chrome, firefox, edge]
+                  tag: [tag1, tag2, tag3]
               fail-fast: false
           steps:
               -   name: Comentário
