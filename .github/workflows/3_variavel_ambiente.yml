@@ -11,9 +11,7 @@ jobs:
         steps:
             -   name: Comentário
                 run: |
-                    echo "${{env.variavel}}"
-                    echo "${{env.variavel1}}"
-                    echo "${{env.variavel2}}"
+                    echo "${{env.variavel}}" echo erro
                     echo $variavel"
                     echo "$variavel1"
                     echo "$variavel2"
